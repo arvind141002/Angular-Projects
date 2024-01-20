@@ -1,0 +1,18 @@
+<div class="profile-card">
+    <div class="picture">
+        <img [src]="profile.img" alt="Profile Picture"> 
+        <!-- property binding -->
+    </div>
+    <div class="content">
+        <!-- string interpolation -->
+        <h3 class="name">{{profile.fname + ' ' + profile.lname}}</h3>
+        <h4 class="role">{{profile.role}}</h4>
+    </div>
+    <div class="socials">
+        <!-- property binding -->
+        <a class="fa fa-facebook" [href]="profile.fb"></a>
+        <a class="fa fa-twitter" [href]="profile.twitter"></a>
+        <a class="fa fa-google" [href]="profile.google"></a>
+        <a class="fa fa-linkedin" [href]="profile.linkedIn"></a>
+    </div>
+</div>

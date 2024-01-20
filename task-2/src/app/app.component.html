@@ -1,0 +1,40 @@
+<div class="title">
+    <h1>TASK - 2</h1>
+</div>
+<div class="header-container">
+  <div (click)="onPostsclick()" class="options">
+      Posts
+  </div>
+  <div (click)="onCommentsclick()" class="options">
+      Comments
+  </div>
+  <div (click)="onAlbumsClick()" class="options">
+      Albums
+  </div>
+  <div (click)="onTodoClick()" class="options">
+      To Do List
+  </div>
+</div>
+<div class="content-area">
+  <div class="search-container">
+      <input type="text" placeholder="Enter ID" [(ngModel)]="searchText">
+      <button (click)="searchClicked()"><i class="fa fa-search"></i></button>
+  </div>
+  <div class="err-msg" *ngIf="selectedOption === ''">
+    <h1>NO CATEGORY SELECTED, PLEASE CHOOSE A CATEGORY</h1>
+  </div>
+  <div class="data-cards-container">
+    <div *ngFor="let p of allPosts">
+        <app-post [post]="p" *ngIf="selectedOption === 'Posts'"></app-post>
+    </div>
+    <div *ngFor="let c of allComments">
+        <app-comment [comment]="c" *ngIf="selectedOption === 'Comments'"></app-comment>
+    </div>
+    <div *ngFor="let a of allAlbums">
+        <app-album [album]="a" *ngIf="selectedOption === 'Albums'"></app-album>
+    </div>
+    <div *ngFor="let t of allTodos">
+        <app-todo [todo]="t" *ngIf="selectedOption === 'Todos'"></app-todo>
+    </div>
+  </div>
+</div>

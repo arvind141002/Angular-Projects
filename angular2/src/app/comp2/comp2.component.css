@@ -1,0 +1,26 @@
+.fruit-card{
+    padding: 10px;
+    background-color: aquamarine;
+    margin: 3px;
+    border-radius: 15px;
+    box-shadow: rgba(0,0,0,0.3);
+    width: 90px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+}
+
+.fruit-name, p{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.fruit-price{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 300;
+}

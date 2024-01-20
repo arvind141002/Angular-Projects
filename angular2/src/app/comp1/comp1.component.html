@@ -1,0 +1,36 @@
+<div class="card">
+    <div><h1>{{details.title}}</h1></div>
+    <div><h2>{{details.message}}</h2></div>
+    <h3>Event Binding is used for  the below  button - (event) = "function defined in the ts file"</h3>
+    <button class="hide-btn" (click)="onClick()">Click to view</button>
+    <div [hidden]="details.display">
+        <h3>Property Binding was used here - [property] = "value from ts file"</h3>
+        <h3>Attribute Binding can be used using the followinng syntax - [attr.attribute] = "value from ts file"</h3>
+    </div>
+    <h3>Below Input field is also an example of Event binding based on the "input" event fo the input tag of html</h3>
+    <label for="Name">Enter Name : </label>
+    <!-- whenever ewvent happens on the input field the $event is generated whole value attribute of the target property will consist of the value that we gave as the input -->
+    <input name="Name" type="text" (input)="onNameChange($event)">
+    <span *ngIf="!(details.name === '')">Event bound data : </span>{{details.name}}
+    <div class="counter-class">
+        <button (click)="decrement()"> - </button> {{details.count}}
+        <button (click)="increment()"> + </button>
+    </div>
+    <h4>Two way binding using [(ngModel)]</h4>
+    <input type="text" [(ngModel)]="details.text">
+    <p><span *ngIf="!(details.text == '')">Two way bound data : </span>{{details.text}}</p>
+    <!-- diabled, hidden, checked - string interpolation wont work -->
+    <h4>Directives in Angular</h4>
+    <img src="../../assets/images/directives.jpg" alt="" srcset=""><br>
+    NgFor Structural directive is used, NgIf, NgStyle are used for the below cards to use appropriate styling, the below list is a separate component
+    <app-filter [all]="totalfruits"
+                [instock]="instockfruits" 
+                [outofstock]="outofstockfruits"
+                (selectedfilterchanged)="onFilterChanged($event)" >
+    </app-filter>
+    <div class="fruit-container">
+        <div  *ngFor="let p of fruits" >
+            <app-comp2 [fruit]="p" *ngIf="selectedfilterradio === 'all' || p.inStock === selectedfilterradio"></app-comp2>
+        </div>
+    </div>
+</div>

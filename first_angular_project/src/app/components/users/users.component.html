@@ -1,0 +1,9 @@
+<app-add-user
+(onAddUser)="addUser($event)">
+</app-add-user>
+<app-user-item 
+*ngFor="let user of users" 
+[user]="user" 
+(onDeleteUser)="deleteUser(user)"
+(onToggleStatus)="toggleStatus(user)">
+</app-user-item>

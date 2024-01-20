@@ -1,0 +1,10 @@
+<div [ngClass]="{status: user.status}" class="user"
+(dblclick)="onToggle(user)">
+    <h3>{{user.name}} 
+        <fa-icon 
+        (click)="onDelete(user)" 
+        [icon]="faTimes" 
+        [ngStyle] = "{'color': 'red'}">
+    </fa-icon></h3>
+    <p>{{user.username}} {{user.phone}}</p>
+</div>

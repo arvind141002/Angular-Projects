@@ -1,0 +1,19 @@
+<form *ngIf="showAddUser" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="name">Name</label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" placeholder="Enter Name">
+    </div>
+    <div class="form-control">
+        <label for="username">Username</label>
+        <input type="text" name="username" [(ngModel)]="username" id="username" placeholder="Enter Username">
+    </div>
+    <div class="form-control">
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" [(ngModel)]="phone" id="phone" placeholder="Enter Phone">
+    </div>
+    <div class="form-control form-control-check">
+        <label for="status">Set Status</label>
+        <input type="checkbox" name="status" [(ngModel)]="status" id="status" placeholder="Enter Username">
+    </div>
+    <input type="submit" value="Save User" class="btn btn-block">
+</form> 

@@ -1,0 +1,13 @@
+.todo-card{
+    margin: 5px 5px;
+    background-color: bisque;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.todo-card:hover{
+    transform: scale(0.8);
+}

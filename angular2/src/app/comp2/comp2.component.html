@@ -1,0 +1,7 @@
+<div class="fruit-card">
+    <p class="fruit-name">{{fruit.name}}</p>
+    <p class="fruit-price">Rs.{{fruit.price}}/-</p>
+    <p [ngStyle]="{'color':fruit.inStock === 'true' ? 'green':'red'}">
+        {{fruit.inStock === 'true' ? 'Available':'Not Available'}}
+    </p>
+</div>

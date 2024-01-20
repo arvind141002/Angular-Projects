@@ -1,0 +1,92 @@
+.profile-card{
+    position: relative;
+    border: none;
+    height: 320px;
+    width: 250px;
+    margin-right: 25px;
+    padding: 20px;
+    overflow: hidden;
+    background-color: white;
+}
+.profile-card .picture{
+    display: flex;
+    justify-content: center;
+    background-color: #3f87da;
+    border-radius: 50%;
+    margin: auto;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    position: relative;
+}  
+
+.profile-card .picture img {
+    border-radius: 50%;
+    transition: all 0.9s ease 0s;
+}
+
+.profile-card:hover img{
+    box-shadow: 0 0 0 14px #f7f5ec;
+    transform: scale(0.7);
+}
+
+
+.profile-card .content{
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card .content h3{
+    font-size: 24px;
+    font-weight: 200;
+    color: #3d3d3d;
+    text-transform: capitalize;
+}
+
+.profile-card .content h4{
+    margin-top: 10px;
+    display: block;
+    font-size: 17px;
+    font-weight: 200;
+    color: #4e5052;
+    text-transform: capitalize;
+}
+
+.profile-card .socials{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3f87da;
+    bottom: -100px;
+    width: 100%;
+    left: 0;
+    height: 35px;
+    padding: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.profile-card:hover .socials{
+    bottom: 0;
+}
+
+.profile-card .socials a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35px;
+    width: 35px;
+    height: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    align-items: center;
+}
+
+.profile-card .socials a:hover{
+    color: #3f87da;
+    background-color: white;
+}

@@ -1,0 +1,9 @@
+<div class="wall">
+  <div class="profile-container">
+    <!-- Structural directive ngFor to populate data items -->
+    <profile *ngFor="let profile of profiles" [profile]="profile">
+    </profile>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
